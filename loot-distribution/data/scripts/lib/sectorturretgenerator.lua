@@ -12,7 +12,5 @@ function SectorTurretGenerator:getSectorRarityDistribution(x, y)
     rarities[1] = lerp(f, 0.10, 0.50, 0, rarities[1])
     rarities[5] = rarities[5] + lerp(f, 0, 0.3, 0.5 * rarities[4], 0)
 
-    print("SectorTurretGenerator::getSectorRarityDistribution" .. tostring(x) .. ":" .. tostring(y))
-
     return rarities
 end

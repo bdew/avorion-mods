@@ -12,9 +12,10 @@ function EquipmentDock.initialize()
 
     Entity():setValue("remove_permanent_upgrades", true)
 
-    
+    station:addScriptOnce("data/scripts/entity/merchants/civilypgrademerchant.lua")
+    station:addScriptOnce("data/scripts/entity/merchants/militaryupgrademerchant.lua")
+    station:addScriptOnce("data/scripts/entity/merchants/miscupgrademerchant.lua")
 end
-
 
 function EquipmentDock.initUI()
     -- dummied out

@@ -32,7 +32,5 @@ function UpgradeGenerator:getSectorBossLootRarityDistribution(x, y)
     rarities[5] = rarities[5] + lerp(d, 0, 95, 0.5 * rarities[4], 0)
     rarities[4] = rarities[4] + lerp(d, 0, 150, 1 * rarities[4], 0)
 
-    print("UpgradeGenerator::getSectorRarityDistribution" .. tostring(x) .. ":" .. tostring(y))
-
     return rarities
 end
