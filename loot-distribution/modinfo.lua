@@ -58,5 +58,5 @@ meta =
     saveGameAltering = false,
 
     -- Contact info for other users to reach you in case they have questions
-    contact = "DM me on steam or leave a comment",
+    contact = "https://github.com/bdew/avorion-mods",
 }

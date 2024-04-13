@@ -11,7 +11,7 @@ meta =
     name = "MoreStuffAtShops",
 
     -- Title of your mod that will be displayed to players
-    title = "More Stuff At Shops (Turrets and Sybsystems)",
+    title = "Split Turret/Upgrade Shops",
 
     -- Type of your mod, either "mod" or "factionpack"
     type = "mod",
@@ -58,5 +58,5 @@ meta =
     saveGameAltering = false,
 
     -- Contact info for other users to reach you in case they have questions
-    contact = "DM me on steam or leave a comment",
+    contact = "https://github.com/bdew/avorion-mods",
 }
