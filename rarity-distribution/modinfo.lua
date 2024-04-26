@@ -4,20 +4,20 @@ meta =
     -- ID of your mod; Make sure this is unique!
     -- Will be used for identifying the mod in dependency lists
     -- Will be changed to workshop ID (ensuring uniqueness) when you upload the mod to the workshop
-    id = "bdew-loot-distribution",
+    id = "3232919558",
 
     -- Name of your mod; You may want this to be unique, but it's not absolutely necessary.
     -- This is an additional helper attribute for you to easily identify your mod in the Mods() list
-    name = "LootRedistribution",
+    name = "BdewRarityRedistribution",
 
     -- Title of your mod that will be displayed to players
-    title = "Loot Redistribution",
+    title = "Better Rarity Distribution",
 
     -- Type of your mod, either "mod" or "factionpack"
     type = "mod",
 
     -- Description of your mod that will be displayed to players
-    description = "This mod alters loot distribution to receive less junk in mid to late game",
+    description = "This mod alters rarity distribution of loot, shops, etc. to have less junk in mid to late game",
 
     -- Insert all authors into this list
     authors = {"bdew"},
@@ -44,7 +44,7 @@ meta =
     --      {id = "OptionalMod", min = "0.2", optional = true}, -- we support OptionalMod optionally, starting at version 0.2
     -- },
     dependencies = {
-        {id = "Avorion", min = "2.4.0"}
+        {id = "Avorion", min = "2.4", max = "2.4.3"}
     },
 
     -- Set to true if the mod only has to run on the server. Clients will get notified that the mod is running on the server, but they won't download it to themselves
