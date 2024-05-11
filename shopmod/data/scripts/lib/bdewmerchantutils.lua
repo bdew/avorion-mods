@@ -158,7 +158,7 @@ function GenerateShopTurrets(x, y, validItems)
 end
 
 function GenerateSpecialShopTurrets(x, y, validItems)
-    local generator = SectorTurretGenerator(MilitaryTurretMerchant.shop:generateSeed())
+    local generator = SectorTurretGenerator()
     local rarities = generator:getSectorRarityDistribution(x, y)
 
     for i, rarity in pairs(rarities) do
