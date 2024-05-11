@@ -21,3 +21,14 @@ function EquipmentDock.initUI()
     -- dummied out
 end
 
+-- Those are passed out to misc upgrade shop so that special items like XSTN-K IV can still be sold
+
+function EquipmentDock.setSpecialOffer(item_in, amount)
+    local station = Entity()
+    station:invokeFunction("miscupgrademerchant", "setSpecialOffer", item_in, amount)
+end
+
+function EquipmentDock.setStaticSeed(value)
+    local station = Entity()
+    station:invokeFunction("miscupgrademerchant", "setStaticSeed", value)
+end
