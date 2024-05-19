@@ -1,16 +1,14 @@
 -- this disables the normal equipment dock / merchant stuff and replaces it with my custom shops
 
+local _bdew_original_initialize = EquipmentDock.initialize
+
 function EquipmentDock.initialize()
     local station = Entity()
-    if station.title == "" then
-        station.title = "Equipment Dock"%_t
-    end
 
-    if onClient() and EntityIcon().icon == "" then
-        EntityIcon().icon = "data/textures/icons/pixel/sdwhite.png"
-    end
+    -- prevent original initialize from actually initializing the shop, but allow other mods hooking into initialize to run
+    EquipmentDock.shop.initialize = function() end
 
-    Entity():setValue("remove_permanent_upgrades", true)
+    _bdew_original_initialize()
 
     station:addScriptOnce("data/scripts/entity/merchants/civilypgrademerchant.lua")
     station:addScriptOnce("data/scripts/entity/merchants/militaryupgrademerchant.lua")

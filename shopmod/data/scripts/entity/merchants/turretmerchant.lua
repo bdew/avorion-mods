@@ -1,14 +1,14 @@
 -- this disables the normal equipment dock / merchant stuff and replaces it with my custom shops
 
+local _bdew_original_initialize = TurretMerchant.initialize
+
 function TurretMerchant.initialize()
     local station = Entity()
-    if station.title == "" then
-        station.title = "Turret Merchant"%_t
-    end
 
-    if onClient() and EntityIcon().icon == "" then
-        EntityIcon().icon = "data/textures/icons/pixel/turret.png"
-    end
+    -- prevent original initialize from actually initializing the shop, but allow other mods hooking into initialize to run
+    TurretMerchant.shop.initialize = function() end 
+
+    _bdew_original_initialize()
 
     station:addScriptOnce("data/scripts/entity/merchants/civilturretmerchant.lua")
     station:addScriptOnce("data/scripts/entity/merchants/militaryturretmerchant.lua")
